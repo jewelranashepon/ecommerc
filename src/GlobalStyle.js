@@ -10,6 +10,12 @@ export const GlobalStyle = createGlobalStyle`
 }
 
 
+p {
+  text-align: start;
+}
+
+
+
 html {
   font-size: 62.5%;
   /* scroll-behavior: smooth; */
