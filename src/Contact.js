@@ -1,7 +1,11 @@
 import React from 'react'
-import styled from 'styled-components'
+import styled from 'styled-components';
+import { useAuth0 } from "@auth0/auth0-react";
+
 
 const Contact = () => {
+  const { user, isAuthenticated } = useAuth0();
+
   return (
     <Wrapper>
         <h2 className="common-heading">Contact Page</h2>
@@ -22,9 +26,16 @@ const Contact = () => {
             <form action="https://formspree.io/f/mjvqlked"
              method="POST" className="contact-inputs">
            
-                <input type="text" name="username" placeholder="username" required autoComplete="off"/>
+                <input type="text"
+                 name="username" 
+                 placeholder="username" 
+                 value={isAuthenticated ? user.name : ""} required autoComplete="off"/>
        
-                <input type="text" name="Email" placeholder="Email" required autoComplete="off" />
+                <input type="text" 
+                name="Email"
+                placeholder="Email"
+                value={isAuthenticated ? user.email : ""}
+                required autoComplete="off" />
                        
                 <textarea
                   name="Meaasge"

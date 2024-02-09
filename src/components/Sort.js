@@ -34,8 +34,8 @@ const Sort = () => {
           <select name="sort" id="sort" className="sort-selection--style" onClick={sorting}>
             <option value="lowest">Price(lowest)</option>
             <option value="height">Price(height)</option>
-            <option value="a-z">Price(a-z)</option>
-            <option value="z-a">Price(z-a)</option>
+            <option value="a-z">Name(a-z)</option>
+            <option value="z-a">Name(z-a)</option>
           </select>
 
         </form>
