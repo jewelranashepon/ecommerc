@@ -6,6 +6,7 @@ const AppContext = createContext();
 
  //const API = "https://fakestoreapi.com/products";
 const API = "https://api.pujakaitem.com/api/products";
+  //  const API = "https://dummyjson.com/users";
 
 
 const initialState = {
